@@ -64,7 +64,7 @@ public class CodeOfDuty {
             vector[j - 1]++;
             sums[j - 1]++;
             currentIteration.add(-j);
-          } else if (sums[j] > (j + 1) * mean) {
+          } else if (vector[j] > 0 && sums[j] > (j + 1) * mean) { //Bug fix. Detected by J. Branco. Thanks
             vector[j]--;
             vector[j + 1]++;
             sums[j]--;
