@@ -33,8 +33,8 @@ public class CodeOfDuty {
     for (int i = 0; i < vector.length; i++)
       sum += vector[i];
     int mean = sum / vector.length;
-    if (sum % mean != 0)
-      return null;
+    if (mean == 0 || sum % vector.length != 0) //origin code: if (sum % mean != 0) Thanks J. Branco for detecting the bug!!
+      return null;    
 
     // Compute sums[i] = sum_{0<=j<=i} vector[i]
     sum = 0;
